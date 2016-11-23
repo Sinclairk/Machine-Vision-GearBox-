@@ -1,5 +1,5 @@
 const int InA1 = 9; //Counter_ClockWise Input For the first Set of wheels(Right Side)
-const int InA2 = 4; //Counter-Clockwise input for the second set of wheels(Left Side)  
+const int InA2 = 4; //Counter-Clockwise input for the second set of wheels(Left Side)
 const int InB1 = 3; //Clockwise input for the first set of wheels(Right Side)RED
 const int InB2 = 8; //Clockwise input for the Second Set of Wheels(Left Side)WHITE
 const int PWM1 = 5; // Speed Input for the first set of wheels(Right Side)
@@ -20,7 +20,7 @@ int move_forward()// Funtion to drive the Rover Forward
   analogWrite(PWM1, 100);//EFT SIDE//100
   analogWrite(PWM2, 100); //RIGHT SIDE
 }
-//Move forward slower than <Move Forwar>
+//Move forward slower than <Move Forward>
 void approach_forward()
 {
  digitalWrite(InA1, HIGH);
@@ -138,7 +138,7 @@ float get_range() // get values from the front sonar
   digitalWrite(Trigpin, LOW);
  int cm = pulseIn(Echopin, HIGH)/58;
 float  dist = cm;
-  Serial.println(cm);  
+  Serial.println(cm);
   return (dist);
 }
 
@@ -170,5 +170,3 @@ void setup()
 void loop()
 {
 }
-
-
